@@ -1,0 +1,45 @@
+[
+	{
+		"gid_uuid": "f314f596-749a-4416-9a62-331840efd260",
+		"gid_name": "externalwalletuser",
+		"externalWallet": [{ "type": "BTC", "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa" }]
+	},
+	{
+		"gid_uuid": "8ed3207d-bda6-4afd-9c92-073417d4ee46",
+		"gid_name": "npdev67",
+		"externalWallet": [
+			{ "type": "ETH", "address": "0x742d35Cc6634C0532925a3b844Bc454e4438f44e" },
+			{ "type": "SOL", "address": "2uQKnbsbX5sxaTt6BPo5dFLhrFprL3LBgnW6w9BzghK2" }
+		]
+	},
+	{
+		"gid_uuid": "bdda8efe-d6e8-41f1-9d05-f2759c8c2c95",
+		"gid_name": "npdev68",
+		"externalWallet": [
+			{ "type": "TETHER", "address": "3MbYQMMmSkC3AgWkj9FMo5LsPTW1zBTwXL" },
+			{ "type": "XRP", "address": "rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh" },
+			{ "type": "BTC", "address": "1BoatSLRHtKNngkdXEeobR76b53LETtpyT" }
+		]
+	},
+	{
+		"gid_uuid": "29c8f06c-f4c5-45fb-80d0-de287277156b",
+		"gid_name": "npdev69",
+		"externalWallet": [
+			{ "type": "SOL", "address": "4k3Dyjzvzp8e63whsFJSQaPDbCHnVTxWJkS6R2X3LB9K" },
+			{ "type": "ETH", "address": "0x267be1c1d684f78cb4f6a176c4911b741e4ffdc0" },
+			{ "type": "BTC", "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa" },
+			{ "type": "XRP", "address": "rB1zaDK4MxzkPhR6Jw4FSV2Bsz1exY1Ep7" }
+		]
+	},
+	{
+		"gid_uuid": "59a95f8f-c0dc-41b7-9808-339cad297528",
+		"gid_name": "bojandev",
+		"externalWallet": [
+			{ "type": "BTC", "address": "1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp" },
+			{ "type": "ETH", "address": "0x6810e776880c02933d47db1b9fc05908e5386b96" },
+			{ "type": "SOL", "address": "4k3Dyjzvzp8e63whsFJSQaPDbCHnVTxWJkS6R2X3LB9L" },
+			{ "type": "TETHER", "address": "3MbYQMMmSkC3AgWkj9FMo5LsPTW1zBTwXR" },
+			{ "type": "XRP", "address": "rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLo" }
+		]
+	}
+]

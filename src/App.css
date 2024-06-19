@@ -1,38 +1,309 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+	height: 40vmin;
+	pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* src/App.css */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-image: url("graphics/GiD_OG_Zoom-Background_Darkmode.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.container {
+	background: rgba(255, 255, 255, 0.9);
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	width: 90%;
+	max-width: 500px;
+	position: relative;
+	overflow: hidden;
+	border: 2px solid #007bff;
+	animation: border-animation 3s infinite;
+}
+
+@keyframes border-animation {
+	0% {
+		border-color: #007bff;
+	}
+	50% {
+		border-color: #ff7f50;
+	}
+	100% {
+		border-color: #007bff;
+	}
+}
+
+h1 {
+	margin-bottom: 3rem;
+	font-size: 2rem;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+}
+
+h1::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background: #007bff;
+	bottom: 0;
+	left: -100%;
+	animation: slide-in 3s infinite;
+}
+
+@keyframes slide-in {
+	0% {
+		left: -100%;
+	}
+	50% {
+		left: 100%;
+	}
+	100% {
+		left: -100%;
+	}
+}
+
+.tabs {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+.tab {
+	padding: 0.5rem 1rem;
+	background-color: #f1f1f1;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.tab:hover {
+	background-color: #e1e1e1;
+}
+
+.tab.active {
+	background-color: #007bff;
+	color: white;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.input-group {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+	position: relative;
+	width: 100%;
+}
+
+.input {
+	padding: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 100%; /* Full width */
+	transition: border-color 0.3s ease;
+	padding-right: 6rem; /* Add padding to the right for the icons */
+}
+
+.input:focus {
+	border-color: #007bff;
+}
+
+.clear-button {
+	background: none;
+	border: none;
+	position: absolute;
+	right: 4rem; /* Position before the paste icon */
+	top: 55%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	color: #ccc;
+	font-size: 1.2rem; /* Increase size for better visibility */
+}
+
+.clear-button:hover {
+	color: #ff7f50;
+}
+
+.paste-button {
+	background: none;
+	border: none;
+	position: absolute;
+	right: 0.5rem;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	color: #007bff;
+	font-size: 1rem; /* Adjust size to match input text */
+}
+
+.paste-button:hover {
+	color: #0056b3;
+}
+
+.search-button {
+	padding: 1rem 2rem;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-button:hover {
+	background-color: #0056b3;
+}
+
+.search-button:active {
+	transform: scale(0.95);
+}
+
+.search-button .fa-search {
+	margin-right: 8px;
+}
+
+@keyframes buttonPulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.search-button.pulsing {
+	animation: buttonPulse 1s infinite;
+}
+
+.error {
+	color: red;
+	margin-top: 1rem;
+	animation: fade-in 0.5s ease-in-out;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.user-info {
+	margin-top: 2rem;
+	text-align: left;
+	animation: slide-up 0.5s ease-in-out;
+}
+
+@keyframes slide-up {
+	from {
+		transform: translateY(20px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.user-info p {
+	margin: 0.5rem 0;
+}
+
+.profile-image {
+	margin-top: 1rem;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.user-info {
+	margin-top: 2rem;
+	text-align: center; /* Center align text */
+	animation: slide-up 0.5s ease-in-out;
+}
+
+.wallet-item {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	margin: 0.5rem 0;
+}
+
+.blockchain-icon {
+	width: 24px;
+	height: 24px;
+	margin-right: 8px;
+}
+
+.copy-button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	margin-left: 8px;
+	color: #007bff;
+}
+
+.copy-button:hover {
+	color: #0056b3;
 }
